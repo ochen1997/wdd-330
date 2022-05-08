@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD 330 Portfolio</title>
+  </head>
+  <body>
+    <h1>Week 3 notes</h1>
+    <p>
+      An object literal in JavaScript is a self contained set related values and
+      functions. They act as a collection of named properties that map to any
+      Javascript value such as strings, numbers, booleans, arrays and functions.
+      if a property value is a function know as method.
+    </p>
+    <p>
+      An object iteral is an object that is created directly in the language by
+      wrapping its properties in curly braces {}. Object literals are a
+      distingushing features of the JavaScript language, as they allow objects
+      tobe created quickly without need for defining a class.
+    </p>
+    <p>To create an object literal, simply enter a pair of curly braces.</p>
+    <p>
+      You can access the properties of an object using the dot notation, this
+      will return a avalue of that property.
+    </p>
+    <ul>
+      <li>superman.name</li>
+    </ul>
+    <p>
+      You can also access an object's properties using bracket notation, the
+      property is represented by a string inside square brackets, so need to be
+      placed inside single or double quotation marks:
+    </p>
+    <ul>
+      <li>superman['name']</li>
+    </ul>
+    <p>
+      To call an object's method we can also use dot or bracket notation.
+      calling a method is the same as invoking a function, do parentheses need
+      to be placed after the method name.
+    </p>
+    <p>
+      The <strong>in</strong> operator can be used to check wether an object has
+      aparticular property.
+    </p>
+    <p>Another way is to use <strong>hasOwnProperty()</strong>method.</p>
+    <p>
+      We can loop through all of an object's properties and methods by using a
+      for in loop, eg;
+    </p>
+    <ul>
+      <li>
+        (const key in superman){ console.log(key + ":" + superman[key]); }
+      </li>
+    </ul>
+    <p>
+      New properties and and methods can be added to objects at anytime in a
+      program. this is done simply by assigning avalue to the new property. for
+      example;
+    </p>
+    <ul>
+      <li>superman.city = 'Metropolis'; output: 'Metropolis'</li>
+    </ul>
+    <p>
+      You can change the value of an object's properties at anytime using
+      assignment. for example we can the value of the "real name" like this.
+    </p>
+    <ul>
+      <li>superman['real name'] = 'kal-El'; output: 'kal-El'</li>
+    </ul>
+    <p>
+      Any property can be removed from an object using the delete operator. for
+      example if we wanted to remove the fly method from the superman object, we
+      would enter the following.
+    </p>
+    <ul>
+      <li>delete superman.fly output: true</li>
+    </ul>
+    <p>
+      It is even possible for an object to contain other objects. Thes are know
+      as nested objects. For example.
+    </p>
+    <ul>
+      <li>
+        const jla = { superman: {realName: 'Clark kent'}, batman: {realName:
+        'Bruce Wayne'}, wonderWoman: {realName: 'Diana Prince'}, flash:
+        {realName: 'Barry Allen'}, aquaman: {realName: 'Arthur Curry'}, }
+      </li>
+    </ul>
+    <p>
+      An object literal can be passed as a parameter to a function. This is
+      useful when there are a large number of parameters, as it allows the
+      arguments to be provided by name and in any order. for example;
+    </p>
+    <ul>
+      <li>
+        function greet(greeting, name, age){ return `${greeting}! My name is
+        ${name} and i am ${age} years old.`; }
+      </li>
+    </ul>
+    <p>
+      JavaScript has anumber of other built in global objects that can be
+      accessed from anywhere in a program, They provide anumber of useful
+      properties and methods.
+    </p>
+    <ul>
+      <li>
+        The parse() method takes a string of data in JSON format and returns a
+        JavaScript object.
+      </li>
+      <li>
+        The stringfy() method does the opposite, taking a Javascript object and
+        returning a string of JSON data.
+      </li>
+    </ul>
+    <p>
+      The math object has eigth properties that represent a maix of commonly
+      used math constants
+    </p>
+    <ul>
+      <li>Math.PI</li>
+      <li>Math.SQRT2 // square root of 2</li>
+      <li>Math.SQRT_2 // recieprocal of the square root of 2</li>
+      <li>Math.E // Euler's constant</li>
+      <li>Math.LN2 // Natural logarithm of 2</li>
+      <li>Math.LN10 // Natural logarithm of 10</li>
+      <li>Math.LOG2E // Log base 2 of Euler's constant</li>
+      <li>Math.LOG10E // Log base 10 of Euler's constant</li>
+    </ul>
+    <p>
+      The math object also has several methods to carry out a variety of usefull
+      mathematical operations.
+    </p>
+    <ul>
+      <li>Math.abs()</li>
+      <li>Math.ceil()</li>
+      <li>Math.floor()</li>
+      <li>Math.round()</li>
+      <li>Math.trunc()</li>
+      <li>Math.exp()</li>
+      <li>Math.pow()</li>
+      <li>Math.sqrt()</li>
+      <li>Math.cbrt()</li>
+      <li>Math.hypot()</li>
+      <li>Math.log2()</li>
+      <li>Math.log10</li>
+      <li>Math.max()</li>
+      <li>Math.min()</li>
+    </ul>
+    <p>
+      Date object contain information about dates and time. Each object
+      represents a single moment in time.
+    </p>
+    <p>
+      A constractor is used to create a new date object using the new operator.
+    </p>
+    <p>
+      The properties odf date object are unable to be viewed or changed
+      directly. instead they have a number of methods known as getter methods,
+      which returns information about the date object, such as month and year.
+    </p>
+    <p>
+      The getDay() and getUTCDay() methods are used to find the day of the week
+      thta the date object falls on. it returns a number, string at 0 for
+      sunday, up to 6 for Saturday;
+    </p>
+    <p>
+      The getDate() and getUTCDate() methods retuns the day of the month for the
+      date object (note that these values start counting from 1, not 0 so they
+      return the actual day of the month)
+    </p>
+    <p>
+      The getMonth() and getUTCMonth() methods canbe used to find the month of
+      the date object it returns an integer, but remember to count from 0; so
+      january is 0 Febuary is 1 and so on up to december being 11.
+    </p>
+    <p>
+      The getFullYear() and getUTCFullYear() methods return the year of the date
+      object.
+    </p>
+    <p>
+      The Document Object Model represents an HTML document as a network of
+      connected nodes that fornm a tree like structure.
+    </p>
+    <p>
+      The DOM treats everything on a web page as a node. HTML tags, the text
+      inside these tags, even the atrributes of a tag are all nodes.
+    </p>
+    <p>
+      The DOM provides several methods that allow us to access any element on a
+      page. These methods will return a node object or node list, which is an
+      array like object. These objects can then be assigned to a variable and be
+      inspected or modified.
+    </p>
+    <p>
+      The getElementById() method does exactly what it says on the tin. it
+      returns a reference to the element with a unique id atribute thta is given
+      as an argument.
+    </p>
+    <p>
+      The getElementByTagName() will return a live node list of all the elements
+      with the tag name that is provided as an argument.
+    </p>
+    <p>
+      The getElementByClassName() will return a live node list of all elements
+      that have the class name that is supplied as an argument.
+    </p>
+    <p>
+      The document. querySelector() method allows you to use CSS notation to
+      find the first element in the document that matches a CSS selector
+      provided as an argument.
+    </p>
+    <p>
+      The document.querySelectorAll() method also uses CSS notation but returns
+      a node of list odf all the elements in the document that match the CSS
+      query selector.
+    </p>
+    <p>
+      The getAttribute() method returns the value of the attribute provided as
+      an assignment.
+    </p>
+    <p>
+      The remove() method will remove as specific class from an element. For
+      example, we could remove the class of 'warrior' with the following code.
+    </p>
+    <ul>
+      <li>wonderWoman.ClassList.remove('warrior')</li>
+    </ul>
+    <p>
+      The toggle method is aparticularly useful method that will add a class idf
+      an element does not have it already, and remove the class if it does have
+      it for example,
+    </p>
+    <ul>
+      <li>wonderWoman.ClassList.toggle('hero') output: false</li>
+      <li>wonderWoman.ClassList.toggle('sport') output: true</li>
+    </ul>
+    <p>
+      Any CSS property names that is seperated by dashes must be written in
+      camelCase notation, so the dash is removed and the next letter is
+      capitalized becuase dashes are not legal characters in property names.
+    </p>
+    <p>
+        The recommended way of of dealing with events, and current standards, is to use event listeners.
+    </p>
+    <p>
+        The addEventListner() method is called on a node object, the node to which the event is being applied.for example
+    </p>
+    <ul>
+        <li>document.body.addEventListener('click', doSomething);</li>
+    </ul>
+    <p>
+        There several Types of Events, ranging from when a video has finished playing to when a resource has completed downloading.
+    </p>
+  </body>
+</html>
