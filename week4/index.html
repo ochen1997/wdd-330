@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD 330 Portfolio</title>
+  </head>
+  <body>
+    <h1>Week 4 notes</h1>
+    <p>
+      The legacy DOM had a useful property called document.forms that returns an
+      HTML collection of all the forms in the document in the order they appear
+      in the markup. for example
+    </p>
+    <ul>
+      <li>const form = document.forms[0];</li>
+      <li>const form = document.getElementByTagname('form')[0];</li>
+      <li>
+        Instead of using a numerical index, we can use the name attribute to
+        identify a form eg; const form = document.forms.search;
+      </li>
+      <li>const forms = document['search'];</li>
+    </ul>
+    <p>
+      A form objecy also has a method called elements that returns an HTML
+      collection of all the elements contained in the form. in this case the
+      form conatain two controls: an input element and a button element. for
+      example;
+    </p>
+    <ul>
+      <li>const [input, button] = form.elements</li>
+    </ul>
+    <p>
+      we can also access the form controlls using their name attributes as if it
+      was a property of the form object. for example.
+    </p>
+    <ul>
+      <li>const input = form.searchInput</li>
+      <li>const input = form['searchInput']</li>
+    </ul>
+    <p>
+      The form.submit() method will submit the form automatically.note that
+      submitting aform using this method wont trigger the form submit event.
+    </p>
+    <p>
+      The form.reset() method will reset all the form controls back to their
+      initial values specified in the HTML.
+    </p>
+    <p>
+      We can actually stop the form from submitting to the url altogether by
+      using the preventDefault() method.
+    </p>
+    <ul>
+      <li>
+        function search(event){ alert('Form Submitted'); event.preventDefault();
+      </li>
+    </ul>
+    <p>Some common form controls are;</p>
+    <ul>
+      <li>
+        input field, including text, passwords, checkboxes, radio buttons, and
+        file uploads
+      </li>
+      <li>select menus for drop down list options</li>
+      <li>textarea elements for longer text entry.</li>
+      <li>button elements for submitting and resetting forms</li>
+    </ul>
+    <p>
+      The input element includes some of the new attributes introduced in HTML5.
+    </p>
+    <ul>
+      <li>document.form.hero.heroName.focus();</li>
+    </ul>
+    <p>
+      The placeholder attribute will insert the value property in the input
+      field until the user enters some text.
+    </p>
+    <p>
+      The maxlength attribute will limit numbers of characteristics that can be
+      entered in the field to the value given.
+    </p>
+    <p>
+      Form validation is the process of checking wether a user has entered the
+      information into a form correctly. for example
+    </p>
+    <ul>
+      <li>Arequired field is completed</li>
+      <li>An email email address is valid</li>
+      <li>A number is entered when numerical number is required.</li>
+      <li>A password is atleast a minimum number of characters</li>
+    </ul>
+    <p>
+      Validation can occur on the client side using JavaScript, and on the
+      server side. it is advisable to use both client side and server side
+      validation.
+    </p>
+    <p>
+      Object oriented programing is often used to model representation of
+      objects in the real world. There are three main concepts in oops;
+    </p>
+    <ul>
+      <li>encapsulation</li>
+      <li>polymorphism</li>
+      <li>Inheritance</li>
+    </ul>
+    <p>
+      Encapsulation ivolves keeping all programming logic inside an object and
+      making methods available to implement the functionallity.
+    </p>
+    <p>
+      polymorphism this means various objects can share the same methods but
+      also have ability to override shared methods with a more specific
+      implementation.
+    </p>
+    <p>
+      Inheritance this means we can take an object that already exists and
+      inherit all its properties and methods. we can then improve on its
+      functionallity by adding new properties.
+    </p>
+    <p>class can be used to define a blue print for an object.</p>
+    <p>
+      All objects have a constructor property thta returns the constructor
+      function that created it.
+    </p>
+    <p>
+      The static keyword can be used in class declaration to create a static
+      method.
+    </p>
+    <p>
+      JavaScript uses a prototypal inheritance model. This means that every
+      class has a prototype property that is shared by every instance of the
+      class.
+    </p>
+    <p>
+      An object instance can overwrite any properties or methods inherited from
+      its prototype by simply assigning a new value to them.
+    </p>
+    <p>
+      The prototype can be used to add any new properties and methods after the
+      class has been declared. it should be used to define any properties that
+      will remain the same for every instance of the class.
+    </p>
+    <p>
+      By default, an object's methods are public in Javascript. Methods and
+      properties are said to be public because they can be queried directly and
+      changed by assignment.
+    </p>
+    <p>
+      Properties of objects in JavaScript are said to be enumerable or non
+      enumerable. if they are not enumerable, this means they wll not show up
+      when a for in loop is used to loop through an object's properties and
+      methods.
+    </p>
+    <p>
+      A class can inherit from another class using the extends keyword in the
+      class declaration.
+    </p>
+    <p>
+      The concept of polymorphism mean that different objects can have the same
+      mehtod, but implement it in different ways.
+    </p>
+    <p>
+      It is possible to add more methods to the prototype of javaScript's built
+      in objects such as numbers, string and array to add more functionallity.
+      This practice is known as monkey-patching.
+    </p>
+    <p>
+      It is possible to avoid using classes altogether and create new objects
+      bases on another object that ac as a blueprint or prototype instead.
+    </p>
+    <p>
+      Everytime a new object is created using the object.create() method, the
+      new object inherits all the properties and methods from the parent objec,
+      which becomes the new objects prototype.
+    </p>
+    <p>
+      It is possible to borrow methods from objects without having to inherit
+      all their properties and methods. This is done by making a reference to
+      the function that you want to borrow.
+    </p>
+    <p>
+      One of the most common uses of borrowing methods was to borrow methods
+      from arrays.
+    </p>
+    <p>
+      A javascript library is a piece of code that provides several methods that
+      make it easier to achieve common tasks. Javascript is an extremely
+      flexible language that can accomplish most programming task but not all
+      undertaking are as easy to do as they should be.
+    </p>
+    <p>
+      jQuery is the most popular of all the JavaScript libraries used todya as
+      seen in these statistics.
+    </p>
+    <p>
+      Abig advantage of utilizing popular libraries is that it will be used by
+      lots of people thoroughly tested
+    </p>
+    <p>
+      A module is a self conatsined piece of code that provides functions and
+      that can then be used in other files and by other modules. This helps to
+      keep code organised in separate, reusable files which improves code
+      maintainability.
+    </p>
+    <p>
+      Node.js had already implemented modules before they were introduced in
+      ES6, and used a slightly different notation called Common js modules.
+    </p>
+    <p>
+      Model view Controller is a design pattern thats been used for a long time
+      in server side languages.
+    </p>
+    <p>
+      Models are object that implement the functionallity for creating, reading,
+      updating and deleting specific pieces of information a bout the
+      application as well as any other associated logic and behavior.
+    </p>
+    <p>
+      Views provide a visual representation of the model showing all the
+      relevant information. in a web application, this would be the HTML
+      displayed on the page. Views also provide a way for users to interact with
+      an application usually via forms.
+    </p>
+    <p>
+      Controllers link models and views together by communicating between them.
+      They respond to events, which are usuallyinputs from user, process the
+      information then update models and view accordingly.
+    </p>
+    <p>
+      An MVC architecture can take a lot of code to implement and many
+      frameworks have emerged that take care of much of the setup code for you.
+    </p>
+    <p>
+      One of the main features of MVC frameworks is data binding, which is the
+      process of linking the model and view together.
+    </p>
+    <p>
+      Aurella is amodern framework that uses ES6 and focuses on letting you
+      write dynamic web applications while keeping the implementation detail in
+      the background.
+    </p>
+    <p>
+      Angular is a power framework by google to make creating dynamic web
+      applications easier. this is done by extending the HTML langauge using
+      custom -ng attributes
+    </p>
+    <p>
+      Ember is a frame work designed to make building large web applications
+      easier. it does this by using common conventions that avoid the need for
+      lots of set up though it can be more difficult if you dont follow
+      coventions.
+    </p>
+    <p>
+      They are number of popular templating languages to chose from, a selection
+      of some of the most popular are shown in the list below.
+    </p>
+    <ul>
+      <li>Handlebars</li>
+      <li>pug</li>
+      <li>EJS</li>
+      <li>Mustache</li>
+      <li>Nunjuncks</li>
+    </ul>
+    <p>
+      The node package manager was developed soon after Node.js was introduced
+      to allow Javascript code to be shared by developers. it has since grown
+      into the largest repository of code libraries avaialable.
+    </p>
+    <p>
+      When it comes to deploying your javascript program, its time to think a
+      bout optimizing the code.
+    </p>
+    <p>
+      Minification is the process of removing any unnecessary characters from
+      your code to reduce the file size. This includes all comments, Whitespaces
+      and other characteristics that are superflous.
+    </p>
+    <p>
+        Tools available to do this, known as minifiers. some popular choices includes
+    </p>
+    <ul>
+        <li>YUI Compresser</li>
+        <li>Google's Closure</li>
+        <li>UglifyJS</li>
+    </ul>
+
+  </body>
+</html>
