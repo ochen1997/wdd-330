@@ -9,7 +9,10 @@ const links = [
       week4label: "week4 notes",
       week4url: "week4/index.html",
       week5lable: "week5 notes",
-      week5url: "week5/index.html"
+      week5url: "week5/index.html",
+      week7lable: "week7 notes",
+      week7url: "week7/index.html"
+    
 
     }, 
     
@@ -52,6 +55,13 @@ function loadIndex() {
         href5.innerText = link.week5lable;
         li5.appendChild(href5);
         ol.appendChild(li5);
+
+        const li7 = document.createElement('li');
+        const href7 = document.createElement('a');
+        href7.setAttribute('href', link.week7url)
+        href7.innerText = link.week7lable;
+        li7.appendChild(href7)
+        ol.appendChild(li7)
 
     })
 }

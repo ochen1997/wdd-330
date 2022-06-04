@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD-330 portfolio</title>
+  </head>
+  <body>
+    <h1>Week 7 notes</h1>
+    <p>
+      The fact that functions are first class objects means they can have
+      properties and methods themselves.for example, all functions have a length
+      property that returns the number of parameters the function has.
+    </p>
+    <p>function square(X){ return x*x; }</p>
+    <p>
+      The call method can be used to set the value of this inside a function to
+      an object that is provided as the first argument.for example,
+    </p>
+    <ul>
+      <li>function sayHello(){ return `Hello, my name is ${this.name}`; }</li>
+    </ul>
+    <p>
+      We can create some objects that have a name property, then use the call()
+      method to invoke the sayHello function , providing each object as an
+      argument. This will then take the value of this in the function. for
+      example
+    </p>
+    <ul>
+      <li>const clark = {name: 'clark'};</li>
+      <li>const bruce = {name: 'Bruce'};</li>
+      <li>sayHello.call(clark);</li>
+      <li>Output: 'Hello, my name is Clark'</li>
+      <li>sayHello.call(bruce)</li>
+      <li>Output: 'Hello, my name is Bruce</li>
+    </ul>
+    <p>
+      There is nothing to stop you adding your own properties to functions in
+      the same way that you can add properties to any object in Javascrip.
+    </p>
+    <p>
+      For example you can add a description property to a function that
+      describes what it does.
+    </p>
+    <p>
+      If a function takes some time to compute a return value, we can save the
+      result in a cache property.
+    </p>
+    <p>
+      Then if if the same argument is used again later, we can return the value
+      of cache, rather than having to compute the result again. for example;
+    </p>
+    <ul>
+      <li>
+        function square(x){ square.cache = square.cache || {};
+        if(!square.cache[x]){ square.cache[x] = x*x } return square.cache[x] }
+      </li>
+    </ul>
+    <p>
+      An immediate invoked function Function Expression is an anonymous functuin
+      that, as the suggests, is invoked as soon as it is defined.
+    </p>
+    <p>
+      This easily achieved by placing parentheses at the end of the function
+      definition, the function also has to be made into an expression, which is
+      done by placing the whole declaration inside parentheses as in this
+      example.
+    </p>
+    <ul>
+        <li>(function(){
+            const temp = 'World';
+            console.log(`Hello ${temp}`);})()
+        </li>
+        <li>Output: 'Hello World'</li>
+    </ul>
+    <p>
+        There is no way to remove variable from scope once it is been declared. if avariable is only required temporarily, it 
+    </p>
+  </body>
+</html>
