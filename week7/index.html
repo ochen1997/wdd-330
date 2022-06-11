@@ -68,14 +68,211 @@
       example.
     </p>
     <ul>
-        <li>(function(){
-            const temp = 'World';
-            console.log(`Hello ${temp}`);})()
-        </li>
-        <li>Output: 'Hello World'</li>
+      <li>
+        (function(){ const temp = 'World'; console.log(`Hello ${temp}`);})()
+      </li>
+      <li>Output: 'Hello World'</li>
     </ul>
     <p>
-        There is no way to remove variable from scope once it is been declared. if avariable is only required temporarily, it 
+      There is no way to remove variable from scope once it is been declared,if
+      avariable is only required temporarily, it may cause confusion if it si
+      still avaialable later in the code.
+    </p>
+    <p>
+      Even worse, the name of the variable may clash with another piece of code
+      resulting in errors, placing any code that uses the temporary variable
+      inside an IIFE to swap the value of two global variables.
+    </p>
+    <p>
+      An IIFE can be used to set up any initialization code that there will be
+      no need for a gian.Because the code is only run once, there is no need to
+      create any reuseable, named functions, and all the variables will also be
+      temporary.
+    </p>
+    <p>
+      An IIFE will be invoked once and can set up any variable objects and event
+      handlers when the page loads.
+    </p>
+    <p>
+      An IIFE can be used to enclose a block of code inside its own private
+      scope so it does not interfere with any other part of the program.
+    </p>
+    <p>Using IIFEs inthis way means code can be added or removed separately.</p>
+    <p>
+      The dynamic nature of javaScript means that a function is able to not only
+      call itsself, but define itself, and even redefine itself. This is done by
+      assigning an anonymous function to avariable that has the same name as the
+      function.
+    </p>
+    <p>
+      A recursive function is one that invokes itself until a certain condition
+      is met. it is a useful tool to use when iterative processes are involved.
+      a commom example is a function that calculates the factorila of numbers.
+    </p>
+    <p>
+      The increase in the use of asynchronous programming in Javascript has
+      meant that more and more callbacks are being used. This can result in
+      messy and confusing code, this is when more than one callback is used in
+      the same function, resulting in a large number of nested blocks that are
+      dificult to comprehend
+    </p>
+    <p>
+      When promise is created, it cals an asynchronous operation and is then
+      said to be pending. it remains in this state while the operation is taking
+      place. At this state, the promise is once said to be unsettled. Once the
+      operationhas completed, the promise is said to have been settled. A
+      settled promise can result in two different outcomes.
+    </p>
+    <ul>
+      <li>Resolved- the asynchronous operation was completed successfully.</li>
+      <li>
+        Rejected- the asynchronous operation did not work as expected, was not
+        successfully completed or resulted in an error.
+      </li>
+    </ul>
+    <p>
+      A promise is created using constructor function.This takes a function
+      called an excutor as an argument. The excutor initializes the promise and
+      starts asynchronous operation. it also accepts two functions as arguments:
+      the resolve() function is called if the operation is successful, and the
+      reject() function is called if the the operation fails.
+    </p>
+    <p>
+      Promise come into their own when multiple asynchronous tasks are required
+      to be carried out after other. if each function that performs an
+      asynchronous operation returns a promise, we can chain then then() method
+      together to form a sequential piece of code that is easy to read. Each
+      promise will only begin once the previous promise has been settled.
+    </p>
+    <p>
+      Callbacks can be used to build more generalized functions. instead of
+      having lots of specific functions, one function can be written that
+      accepts a callback.
+    </p>
+    <p>
+      Higher order functions are functions that accept another function as an
+      argument, or return another function as a result or both.
+    </p>
+    <p>
+      Curring is a process that involves the partial application of functions.
+      it is named after the logician Haskell Curry.
+    </p>
+    <p>
+      A function is said to be curried when not all arguments have been supplied
+      to the function, so it returns another function that retains the arguments
+      already provided, and expects the remaining arguments already provided,
+      and expects the remaining arguments were omitted when the original
+      function was called. A final result is only returned once all the expected
+      arguments have eventually been provided.
+    </p>
+    <p>
+      Currying relies on higher order function that are able to return partially
+      applied functions. All curried functions are hiher-order functions becuase
+      they return a function, but not all higher- order functions are curried.
+    </p>
+    <p>
+      Curring allows you to turn a single function into a series of function
+      instead. This is useful if you find that you are frequently calling a
+      function with the same argument.
+    </p>
+    <p>
+      A Jax is a technique that allows web pages to communicate asynchronous
+      with a server, and it dynamically updates web pages without reloading.
+      This enables data to be sent and received in the background, as well as
+      portion of a page to be updated in response to user events, while the rest
+      of the program continues to run.
+    </p>
+    <p>
+      The use of Ajax revlutionized how websites worked, and ushered in a new
+      age of web applications. wb pages were no longer static, but dynamic
+      applications.
+    </p>
+    <p>
+      The web of computers known as the internet can be sparated into two parts:
+      clients and servers. A client, such as a web browser, will request a
+      source usually a web page from a server, which processes that request and
+      sends back a response to the client.
+    </p>
+    <p>
+      Javascrip was originally designed as client side scripting language,
+      meaning that it ran locally in the browser, adding dynamic features to the
+      web page that was returned from the server.
+    </p>
+    <p>
+      Aax allows javaScript to request resources from a server on behalf of the
+      client. The resources requested are usually JSON data or small fragment of
+      text or HTML rather than a whole web page.
+    </p>
+    <p>
+      Consquently, a server is required when requesting resources using Ajax.
+      Typically this involves using a server sude language, such as PHP, Ruby,
+      Node.js, or.NET to serve the data response following an a jax request
+      (usually from back end database).
+    </p>
+    <p>
+      To practice using Ajax, you can either set up a local development server
+      on your own computer or request the files from an external website that
+      uses cross origin resource sharing in order to avoid the same origin
+      policy that browser enforce.
+    </p>
+    <p>
+      The fetch provides a global fetch() method that only has one mandatory
+      argument , which is the URL of the resource ypu wish to fetch. A very
+      basic example
+    </p>
+    <ul>
+      <li>fetch("https://example.com/data")</li>
+      <li>.then(// code thathandles the response)</li>
+      <li>.catch(// code that runs if the server returns an error)</li>
+    </ul>
+    <p>
+      The fetch API introduced the response interface that deals with the object
+      that's returned when the promise is filled. Response objects have number
+      of properties and methods that allow us to process the response
+      effectively.
+    </p>
+    <p>
+      The redirect() method can be used to redirect to another URL. it creates a
+      new promise that resolves to the response that can then be chained
+      together.
+    </p>
+    <p>
+      The text method takes a stream of text from the the response, reads it to
+      completion and the returns a promise that resolves to USVString object
+      that can be treated as a string in Javascrip.
+    </p>
+    <p>
+      The blob() method is used to read a file of raw data, such as an image or
+      spreedsheet. Once it has read the whole file, it returns a promise that
+      resolves with blob object.
+    </p>
+    <p>
+      JSON is probably the most common format for Ajax response. The Json()
+      method is used to deal with these by transforming a stream of JSON data
+      into a promise that resolves to Javascrip object.
+    </p>
+    <p>
+      We can get more fine grained control over the request being made by
+      providing a request object as an argument. This allows a number of options
+      to be set about the request.
+    </p>
+    <p>
+      HTTP headers are used to pass on any additonal information about a request
+      or response. Typical information contained in headers includes the file
+      type of the resources, cookie information authentication information and
+      when the resources was last modified.
+    </p>
+    <p>
+      The fetch API introduced Headers interface, which can be use to crste a
+      Headers object, which can then be added as a porpety of request and
+      response objects.
+    </p>
+    <p>
+      To demostrate how to update a web page using Ajax, we will need to set up
+      a demostration page, crreate a file called ajax.html that contains code.
+    </p>
+    <p>
+      We can also use Ajax to send information. This can be a variety of formats, but is usually a JSON string.
     </p>
   </body>
 </html>
