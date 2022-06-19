@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD 330 Portfolio</title>
+  </head>
+
+  <body>
+    <h1>Week 9 notes</h1>
+    <p>
+      Every JavaScript environment has a global variable. Any variable that are
+      created in the global scope are actually properties of this object, and
+      any functions are mthods of it.
+    </p>
+    <p>
+      In a browser environment the global object is the window object, which
+      represent the browser window that contains a web page.
+    </p>
+    <p>
+      The Browser Object Model is a collection of properties and methods that
+      contain information about the browser and computer screen.
+    </p>
+    <p>
+      Global variables are variables that are created without using the const,
+      let or var keywords. Global variables can be accessed in all parts of the
+      program.
+    </p>
+    <p>
+      Global varaibles are actuaul properties of a global object. In a browser
+      environment, the globle objet is the window object.
+    </p>
+    <p>
+      The window.alert() method will pause the execution of the program and
+      display a message in the dialog box. The message is provided as an
+      argument to the method, and undefined is always returned.
+    </p>
+    <p>
+      The window.confirm() method will stop the execution of the program and
+      display a confirmation dialog that shows amessege as an argument and
+      giving an option of ok or cancel. It returns the boolean values true if
+      the user clicks ok and false if the user clicks cancel.
+    </p>
+    <p>
+      The window.prompt() method will stop the execution of the program. it
+      displays a dialog that shows a message provided as an argument, as well as
+      an input field that allows the user to enter text. This text is then
+      return as astring when the user clicks ok. if the user clicks cancel, null
+      is returned.
+    </p>
+    <p>
+      The window object has a navigator property that returns a reference to the
+      navigator object.
+    </p>
+    <p>
+      The navigatorobject contains information about the browser being used.it
+      is userAgent property will return information about the browser and
+      operating systm being used.
+    </p>
+    <p>
+      The window.location property is an oblect that contains information about
+      the URL of the current page. it contains a number of properties that
+      provide information about different fragments of the URL. The URL property
+      returns the full URL as a sring.
+    </p>
+    <p>The protocol property returns a string describing a protocol eg;</p>
+    <ul>
+      <li>http:</li>
+      <li>https:</li>
+      <li>pop2:</li>
+      <li>ftp:</li>
+    </ul>
+    <p>
+      The host property returns a string describing the domain of the current
+      URL and the port number.
+    </p>
+    <p>
+      The hostname property returns asring describing the domain of the current
+      URL.
+    </p>
+    <p>
+      The port property returns a string describing the port number, although it
+      will return an empty string if the port is not explicity stated in the
+      URL.
+    </p>
+    <p>
+      The pathname property returns a string of the path that follows the
+      domain.
+    </p>
+    <p>The search property returns a string that stsrts with with a "?"</p>
+    <p>The hash property returns a string that starts with a "#"</p>
+    <p>
+      The origin property returns a string that shows the protocol and the
+      domain where the current page orinated from.
+    </p>
+    <p>The window.location object has the following methods;</p>
+    <ul>
+      <li>
+        reload() method- can be used to force a reload of the current page. if
+        its given parameter of true.
+      </li>
+      <li>
+        assign() method- can be used to load another resources from a URL
+        provided as a parameter.
+      </li>
+      <li>The toString() method returns a string containing the whole URL.</li>
+    </ul>
+    <p>
+      The window.history property can be used to access information about any
+      previous visited pages in the current browser session.
+    </p>
+    <p>
+      The window.history.length property shows how many pages have been visited
+      before arriving at the current page.
+    </p>
+    <p>
+      The window.history.go() method can be used to go to a specific page, where
+      0 is the current page.
+    </p>
+    <p>
+      The window.history.forward() and window.history.back() methods that can be
+      used to navigate forwards and backwards by one page respectively.
+    </p>
+    <p>Anew window can be opened using the window.open() method.</p>
+    <p>The close() method can be used to close a window.</p>
+    <p>It is possible to move a window using the window.moveTo() method.</p>
+    <p>You can resize a window using the window.resizeTo() method.</p>
+    <p>
+      The window.screen object contains information about the screen the browser
+      is displayed on.
+    </p>
+    <p>
+      The availHeight and availWidth can be used to find the height and the
+      width of the screen.
+    </p>
+    <p>
+      The colorDepth property can be used tom find the color bit depth of the
+      user's monitor.
+    </p>
+    <p>
+      The write() method simply writes a string of text to the page. if a page
+      is already loaded, it will completely replace the current document.
+    </p>
+    <p>
+      The document.write() method can also be used within a document inside
+      script tags to inject a string into the markup. This will overwrite the
+      rest of the HTML on the page.
+    </p>
+    <p>
+      To create a cookie, you assign it to javaScript's cookie jar using the
+      document.cookie property.
+    </p>
+    <p>
+      Adding the string ; secure to the end of a cookie will ensure it is only
+      transmitted over a seure HTTPS networks.
+    </p>
+    <p>
+      The data attribute is a way of embedding data in a web page using custom
+      attributes that are ignored by the browser.
+    </p>
+    <p>
+      The names of these attributes can be decided by the developer, but they
+      must use the following format
+    </p>
+    <ul>
+      <li>Start with data-</li>
+      <li>
+        Contain only lowercase letters, numbers, hyphens, dots, colons or
+        underscores
+      </li>
+      <li>Include an optional string value</li>
+    </ul>
+    <p>
+      The HTML5 speifications contains a number of APIs that can help to gain
+      access to hardware such as
+    </p>
+    <ul>
+      <li>cameras</li>
+      <li>batteries</li>
+      <li>geolocation</li>
+      <li>graphics card</li>
+    </ul>
+    <p>
+      The web Storage API provides a key-value store on the clients computer
+      that is similar to using cookies but has fewer restrictions, more storage
+      capacity, and generally easy to use.
+    </p>
+    <p>
+      If a browser supports the web Storage API the window object will have ap
+      property called localStorage.
+    </p>
+    <p>
+      Everytime a value is saved to the local storage a storage event is fired.
+    </p>
+    <p>
+      The geolocation API is used to obtain the geographical position of the
+      device.
+    </p>
+    <p>
+      If geolocation is available, it will be a property of the navaigator
+      object. This property has a method called such as
+    </p>
+    <ul>
+      <li>
+        getCurrentPosition()- that will return a position object ro as pecific
+        callback function called youAreHere()
+      </li>
+    </ul>
+    <p>
+      The clearWatch() method can be used to stop the callback being called,
+      using the ID of the watch as an argument
+    </p>
+    <p>
+      The Geolocation API provides a useful interface for adding location based
+      information to a wbsite or application
+    </p>
+    <p>
+      The service worker API allows a worker script to run in the backgroundwith
+      the added benefits of being able to intercept network requests.
+    </p>
+    <p>
+      HTML5 introduced the audio and vedio tags used to insert audio and video
+      clips into a web page. it also introduced a media API for controlling the
+      playback of the clips using JavaScript.
+    </p>
+    <p>
+      An audio clip can be inserted into a page with the audio tag, using the
+      src attribure to point to the audio file
+    </p>
+    <p>
+      Adio and Video elements have anumber of properties and methods to control
+      the playback of the clip
+    </p>
+    <ul>
+      <li>
+        The play() method will start the clip by playing from its current
+        position
+      </li>
+      <li>The pause() method will pausse the clip at its current position</li>
+      <li>
+        The volume property is anumber that can be used to set the audio volume
+        - video.volume = 0.9;
+      </li>
+      <li>
+        The muted property is a boolean value that can be used to mute the audio
+      </li>
+      <li>
+        The currentTime property is a number value that can be used to jump to
+        another part of the clip
+      </li>
+      <li>
+        The playbackRate property is used to fast-forward or rewind the clip by
+        changing its value
+      </li>
+      <li>
+        The loop property is a boolean value that can be set to true to make the clip repeat in a loop.
+      </li>
+      <li>The duration property can be used to see how long the clip lasts.</li>
+    </ul>
+  </body>
+</html>
