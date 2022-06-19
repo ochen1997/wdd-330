@@ -89,7 +89,176 @@
       seconds to delay transition.
     </p>
     <p>
-        
+      The first step to using canvas is to add a canvas element to the page.
+    </p>
+    <p>
+      The text between the canvas tags will only be shown if the canvas element
+      is not supported by the visitors browser.
+    </p>
+    <p>
+      Since the drawing of the canvas is used by javaScript, we will need a way
+      to grab the element from the DOM, we will do so by giving our Canvas an
+      id.
+    </p>
+    <p>
+      The canvas element takes both a width and height attribute, which must
+      also be set.
+    </p>
+    <p>
+      Finally lets add a border to our canvas using some of the CSS to visually
+      distinguish it on the page. Canvas has no default styling, so it is
+      difficult to see where it is on the page unlesss you give it some kind of
+      border
+    </p>
+    <p>All drawing on the canvas happens via the canvas JavaScript API.</p>
+    <p>
+      Once you have stored the Canvas element in avariable, we then set up the
+      canvas context. The context is the olace where your drawing is rendered.
+    </p>
+    <p>
+      We obtain our drawing context by calling the getContext method and passing
+      it the string "2d" since we will be drawing in two dimensions.
+    </p>
+    <p>Painting canvas is used by the following;</p>
+    <ul>
+      <li>strokeStyle</li>
+      <li>fillStyle</li>
+      <li>Both strokeStyle and fillStle are set on a context object.</li>
+    </ul>
+    <p>
+      We can draw a rectangle by calling the fillRect and strokeRect methods.
+      Both of these methods take the x and the y coordinates, and the width and
+      height of the rectangle.
+    </p>
+    <p>
+      We can use the API's toDataURL method to save our drawing. toDataURL
+      creates a URL with the image in it. you can then rigth click the image at
+      this URL and save it as a PNG or JPEG.
+    </p>
+    <p>
+      We can also draw images onto the canva selement,by ensuring element has
+      loaded in order to do that we will add an event listner that run our code
+      only once the window's load event has fired.
+    </p>
+    <p>
+      We will add a new event listner to react to play event firing on the video
+      element., we will call a custom function called draw when the video begins
+      playing. tod do so ww will add an event listner to our video element thta
+      responds to the play event.
+    </p>
+    <p>
+      The draw function which is a custom function that we will define, will be
+      called when the play event fires. it will be passed the video , context
+      and canvas objects.
+    </p>
+    <p>
+      We are using an anonymous function here instead of a normal named
+      functions because we are unable to actually pass parameters to named
+      functions when declaring the as event handlers without wrapping them in an
+      a nother function.
+    </p>
+    <p>
+      If an error occurs when trying to call getImageData it would be nice to
+      let the user know what is going wrong. we will do just tha, using the
+      fillText method of the Canvas API.
+    </p>
+    <p>
+      Before we write any text to the canvas, we should clear whats already
+      there. We have already drawn the first frame of the video into the canvas
+      using the call to drawImage. How can we clear that.
+    </p>
+    <p>
+      It turns out that if we reset the width or height of the canvas, the
+      canvas will be cleared, so lets reset the width.
+    </p>
+    <p>
+      Next lets change the background color from black to transparent, since the
+      canvas element is positioned on top of the video.
+    </p>
+    <p>
+      Before we can draw any text to the now transparent canvas, we first must
+      set up the style of our text similar to what we did with paths earlier. we
+      do that with the fillStyle and textAlign methods.
+    </p>
+    <p>
+      We can also set a specific font and font style we had like to use. THe
+      font property of the context object works the same way the CSS font
+      property does. We will specify a font size of 18px and comma separated
+      list of font families.
+    </p>
+    <p>
+      Finally we draw the text. we use a method of the context object called
+      fillText which takes the text to be drawn and the x,y coordinates where it
+      should be placed. Since we want to write out a fairly long messag, we will
+      split it up into several section, placing each one on the canvas
+      separately.
+    </p>
+    <p>
+      As the last step, we return false. This lets us check in the draw function
+      wether an exception was thrown. if it was, we want to stop calling
+      drawOneFrame for each video frame, so we exit the draw function.
+    </p>
+    <p>
+      Drawing a circle with SVG is easier than drawing a circle with canvas.
+    </p>
+    <p>
+      The viewBox attribute defines the starting location width, and height of
+      the SVG image. The circle element defines a circle with cx and cy the x
+      and y coordinates of the center of the circle. The redius is represented
+      by r while fill defines the fill style.
+    </p>
+    <p>
+      To view an SVG file you simply open it via the file menu in any browser
+      that supports SVG.
+    </p>
+    <p>
+      We can also draw rectangles in SVG and add a sroke to them as we did with
+      canvas.
+    </p>
+    <p>
+      Next we populate the rect tag with a number of attributes that describes
+      the rectangle. This includes the x and y coordinate where the rectangle
+      should be drawn, the width and height of the rectangle, the fill the
+      stroke and the width of the stroke.
+    </p>
+    <p>
+      Much as with canvas, you can draw images into a container that you create
+      using Raphael. lets add a div to our main index file. we will use this as
+      a container for the SVG elements that we will create using Raphael. we
+      have given this div the id of spinner.
+    </p>
+    <p>
+      We have styled this div to be placed in the center of the parent mapDiv
+      using CSS.
+    </p>
+    <p>
+      Now in our geolocation javaScript .js, lets put the spinner in place while
+      we are fetching the map. The first step is to turn our div into Raphael
+      container. This is as simple as calling the raphael method, and passing in
+      the element we had like to use a long with a width and height.
+    </p>
+    <p>
+      Next we draw the spinner SVG image into newly created container with the
+      Raphael method image which is called on a Raphael container object. This
+      method takes the path of the image, the starting coordinates where the
+      image should be drawn and width and height of the image.
+    </p>
+    <p>
+      The final step is to call the animate method and specify how long the
+      animation should last. In our case, we will let it run fo amaximum of 60
+      seconds. Since animate takes its values in milliseconds we will pas it to
+      60000.
+    </p>
+    <p>
+      We now have a spinning progress indicator to keep our visitors in the know
+      while our map is loading. There is still one problem, though it remains
+      after the map has loaded. we can fix this by adding one line to the
+      beginning of the existing displayOneMap function.
+    </p>
+    <p>
+      This line sets the display property of the spinner element to none,
+      effectively hiding the spinner div and the SVG image we have loaded into
+      it.
     </p>
   </body>
 </html>
