@@ -1,0 +1,59 @@
+@media only screen and (min-width: 768px) {
+    header {
+        max-width: 500px;
+        margin: auto;
+    }
+    .lists, a {
+        text-decoration: none;
+        display: none;
+        color: white;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-between;  
+            
+    }
+
+    .list, a:hover {
+        color: rgb(157, 255, 0);
+        background-color: #3A5311;
+        border-radius: 20px 20px 20px;
+        padding: 5px;
+    }
+    
+    .fig {
+        margin-top: 20px;
+        text-align: center;
+       
+    }
+    .fc {
+        text-align: center;
+    }
+    
+    form {
+        text-align: center;
+        margin-top: 20px;
+        
+    }
+    
+    body {
+        background-color: #000000;
+    }
+    
+    label {
+        background-color: white;
+        color: #3A5311;
+        font-family: "Roboto";
+        
+    }
+    #search {
+        font-family: "Roboto";
+    }
+    
+    
+    #button {
+        color: #3A5311;
+        border: none;
+        background-color: white;
+        font-family: "Roboto";
+    }
+}

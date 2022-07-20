@@ -1,26 +1,31 @@
 const links = [
     {
       label: "Week1 notes",
-      url: "week1/index.html",
+      url: "Week1/index.html",
       week2label: "week2 notes",
-      week2url: "week2/index.html",
-      week3label: "week3 notes",
-      week3url: "week3/index.html",
-      week4label: "week4 notes",
-      week4url: "week4/index.html",
-      week5lable: "week5 notes",
-      week5url: "week5/index.html",
-      week7lable: "week7 notes",
-      week7url: "week7/index.html",
-      week8label: "week8 notes",
-      week8url: "week8/index.html",
-      week9label: "week9 notes",
-      week9url: "week9/index.html",
-      week10label: "week10 notes",
-      week10url: "week10/index.html",
+      week2url: "Week2/index.html",
+      week3label: "Week3 notes",
+      week3url: "Week3/index.html",
+      week4label: "Week4 notes",
+      week4url: "Week4/index.html",
+      week5lable: "Week5 notes",
+      week5url: "Week5/index.html",
+      week7lable: "Week7 notes",
+      week7url: "Week7/index.html",
+      week8label: "Week8 notes",
+      week8url: "Week8/index.html",
+      week9label: "Week9 notes",
+      week9url: "Week9/index.html",
+      week10label: "Week10 notes",
+      week10url: "Week10/index.html",
+      challengelabel: "Challenge 1",
+      challengeurl: "Challenge1/todolist.html",
+      challenge2label: "Challenge 2",
+      challenge2url: "challenge2/small.html"
+      
     
 
-    }, 
+    } 
     
   ]
 
@@ -89,6 +94,24 @@ function loadIndex() {
         href10.innerText = link.week10label;
         li10.appendChild(href10);
         ol.appendChild(li10);
+
+        const todoList = document.createElement('li');
+        const todoListHref = document.createElement('a');
+        todoListHref.setAttribute('href',link.challengeurl);
+        todoListHref.innerText = link.challengelabel;
+        todoList.appendChild(todoListHref);
+        ol.appendChild(todoList);
+
+        const ch2Li = document.createElement('li');
+        const ch2LiHref = document.createElement('a');
+        ch2LiHref.setAttribute('href',link.challenge2url);
+        ch2LiHref.innerText = link.challenge2label;
+        ch2Li.appendChild(ch2LiHref);
+        ol.appendChild(ch2Li);
+
+        
+
+        
 
     })
 }
