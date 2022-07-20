@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+}
+p,
+li {
+    font-family: 'Roboto';
+    font-size: larger;
+    
+}
+
+body {
+    background-color: rgb(233, 224, 213);
+}

@@ -1,0 +1,23 @@
+#linksList, li a {
+  text-decoration: none;
+  color: rgb(175, 239, 184);
+  font-size: larger;
+  font-family:'Roboto' ;
+}
+#linksList, li {
+    padding: 10px;
+    margin: 20px;
+    
+}
+h1 {
+    text-align: center;
+    color: rgb(108, 172, 224);
+    font-family: 'Roboto';
+}
+
+#linksList,li, a:hover {
+    color: white;
+    background-color: black;
+    border-radius: 20px 20px 20px;
+}
+
